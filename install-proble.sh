@@ -45,6 +45,8 @@ install_binary() {
 
   chmod +x wanprobe
   echo "Installing probe..."
+  echo "Moving wanprobe to /usr/local/bin..."
+  echo "Enter your computer password for sudo access:"
   sudo mv wanprobe /usr/local/bin wanprobe
   echo "Installation completed successfully!"
 }
