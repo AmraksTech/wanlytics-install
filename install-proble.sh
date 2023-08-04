@@ -31,21 +31,21 @@ get_architecture() {
 install_binary() {
   local os_type=$1
   local arch=$2
-  local binary_url="https://installer.wanlytics.io/wanlytics_probe_${os_type}_${arch}"
+  local binary_url="https://installer.wanlytics.io/wanprobe_${os_type}_${arch}"
 
   echo "Downloading myapp binary for $os_type ($arch)..."
   if command -v curl &>/dev/null; then
-    curl -o wanlytics_probe -L "$binary_url"
+    curl -o wanprobe -L "$binary_url"
   elif command -v wget &>/dev/null; then
-    wget -O wanlytics_probe "$binary_url"
+    wget -O wanprobe "$binary_url"
   else
     echo "Error: Neither 'curl' nor 'wget' found. Please install either of them."
     exit 1
   fi
 
-  chmod +x wanlytics_probe
-  echo "Installing myapp..."
-  sudo mv wanlytics_probe /usr/local/bin/wanlytics_probe
+  chmod +x wanprobe
+  echo "Installing probe..."
+  sudo mv wanprobe /usr/local/bin wanprobe
   echo "Installation completed successfully!"
 }
 
