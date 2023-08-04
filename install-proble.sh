@@ -19,6 +19,7 @@ get_architecture() {
   case "$(uname -m)" in
     x86_64)  arch=amd64;;
     i686)    arch=386;;
+    arm64)   arch=arm64;;
     *)       arch=unknown;;
   esac
   echo "$arch"
