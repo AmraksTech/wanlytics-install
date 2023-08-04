@@ -44,6 +44,12 @@ install_binary() {
   fi
 
   chmod +x wanprobe
+  if [ $? -eq 0 ]; then
+    echo "Fetched wanprobe!"
+  else
+    echo "Error while installing wanprobe!"
+    exit 1
+  fi
   echo "Installing probe..."
   echo "Moving wanprobe to /usr/local/bin..."
   echo "Enter your computer password for sudo access:"
