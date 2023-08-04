@@ -21,7 +21,7 @@ get_architecture() {
     i686)    arch=386;;
     armv7l)  arch=arm;;
     aarch64) arch=arm64;;
-    arm64) arch=arm64;;
+    arm64)   arch=arm64;;
     *)       arch=unknown;;
   esac
   echo "$arch"
