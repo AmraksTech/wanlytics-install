@@ -33,7 +33,7 @@ install_binary() {
   local arch=$2
   local binary_url="https://installer.wanlytics.io/wanprobe_${os_type}_${arch}"
 
-  echo "Downloading myapp binary for $os_type ($arch)..."
+  echo "Downloading wanprobe binary for $os_type ($arch)..."
   if command -v curl &>/dev/null; then
     curl -o wanprobe -L "$binary_url"
   elif command -v wget &>/dev/null; then
